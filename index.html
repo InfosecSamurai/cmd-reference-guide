@@ -4,112 +4,378 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Windows CMD Reference Guide</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        h3 {
+            color: #2980b9;
+        }
+        pre {
+            background-color: #ecf0f1;
+            padding: 10px;
+            border: 1px solid #bdc3c7;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #d5dbdb;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        .command {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #bdc3c7;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Windows Command Prompt (CMD) Reference Guide</h1>
-        <button id="themeToggle" onclick="toggleTheme()">Switch to Dark Mode</button>
-        <input type="text" id="searchBar" placeholder="Search commands..." onkeyup="filterCommands()">
-        <nav>
-            <ul>
-                <li><a href="#basic-commands">Basic Commands</a></li>
-                <li><a href="#additional-commands">Additional Commands</a></li>
-                <li><a href="#ethical-hacking">Ethical Hacking Commands</a></li>
-                <li><a href="#secret-commands">Secret Commands</a></li>
-                <li><a href="#usage-tips">Usage Tips</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section id="basic-commands">
-            <h2>Basic Commands</h2>
-            <div class="command">
-                <h3>CD</h3>
-                <p><strong>Description:</strong> Changes the current directory to the specified path.</p>
-                <p><strong>Usage:</strong></p>
-                <pre><code class="language-bash">CD C:\Users\Username\Documents</code></pre>
-            </div>
-            <!-- Repeat for other basic commands -->
-        </section>
+<h1>Command Line Reference</h1>
 
-        <section id="additional-commands">
-            <h2>Additional Commands</h2>
-            <div class="command">
-                <h3>ASSOC</h3>
-                <p><strong>Description:</strong> Displays or modifies file extension associations.</p>
-                <p><strong>Usage:</strong></p>
-                <pre><code class="language-bash">ASSOC .txt</code></pre>
-            </div>
-            <!-- Add more additional commands here -->
-        </section>
+<h2 id="additional-commands">Additional Commands</h2>
 
-        <section id="ethical-hacking">
-            <h2>Commands for Ethical Hackers and Pen testers</h2>
-            <div class="command">
-                <h3>IPCONFIG</h3>
-                <p><strong>Description:</strong> Displays network configuration for all network adapters.</p>
-                <p><strong>Usage:</strong></p>
-                <pre><code class="language-bash">IPCONFIG</code></pre>
-            </div>
-            <!-- Add ethical hacking commands -->
-        </section>
+<div class="command">
+    <h3>FIND</h3>
+    <p><strong>Description:</strong> Searches for a text string in a file or files.</p>
+    <p><strong>Usage:</strong><br><code>FIND "search_string" file.txt</code></p>
+    <pre><strong>Example Output:</strong>
+1: This is the line with the search_string.
+    </pre>
+</div>
 
-        <section id="secret-commands">
-            <h2>Secret Commands</h2>
-            <div class="command">
-                <h3>HELP</h3>
-                <p><strong>Description:</strong> Lists all available commands.</p>
-                <p><strong>Usage:</strong></p>
-                <pre><code class="language-bash">HELP</code></pre>
-            </div>
-            <!-- Add more secret commands -->
-        </section>
+<div class="command">
+    <h3>LABEL</h3>
+    <p><strong>Description:</strong> Creates or changes the label of a disk.</p>
+    <p><strong>Usage:</strong><br><code>LABEL D: NewLabel</code></p>
+    <p><strong>Example Output:</strong><br>(No output, but the label is changed.)</p>
+</div>
 
-        <section id="usage-tips">
-            <h2>Usage Tips</h2>
-            <ul>
-                <li>Always run Command Prompt as an administrator for commands that require elevated privileges.</li>
-                <li>Use the /help option with commands to learn more about their usage.</li>
-                <li>Be cautious when using commands that modify system settings or files.</li>
-            </ul>
-        </section>
-    </main>
+<div class="command">
+    <h3>NBTSTAT</h3>
+    <p><strong>Description:</strong> Displays NetBIOS over TCP/IP statistics.</p>
+    <p><strong>Usage:</strong><br><code>NBTSTAT -s</code></p>
+    <pre><strong>Example Output:</strong>
+Host Table
+Name            Type         Status
+------------------------------------------
+MyComputer      <00>        Registered
+    </pre>
+</div>
 
-    <footer>
-        <p>Want to contribute? Check out the <a href="https://github.com/your-repo">GitHub repository</a>.</p>
-    </footer>
+<div class="command">
+    <h3>POWERCFG</h3>
+    <p><strong>Description:</strong> Configures power settings.</p>
+    <p><strong>Usage:</strong><br><code>POWERCFG /LIST</code></p>
+    <p><strong>Example Output:</strong><br>Power Schemes (*) are Labeled.</p>
+</div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
-    <script>
-        function filterCommands() {
-            const input = document.getElementById('searchBar');
-            const filter = input.value.toLowerCase();
-            const sections = document.querySelectorAll('section');
+<div class="command">
+    <h3>RECYCLER</h3>
+    <p><strong>Description:</strong> Manages the Recycle Bin (deprecated).</p>
+    <p><strong>Usage:</strong><br><code>RECYCLER</code></p>
+    <p><strong>Example Output:</strong><br>(No output; used in legacy systems.)</p>
+</div>
 
-            sections.forEach(section => {
-                const commands = section.getElementsByTagName('h3');
-                let hasMatch = false;
+<div class="command">
+    <h3>SC</h3>
+    <p><strong>Description:</strong> Communicates with the Service Control Manager.</p>
+    <p><strong>Usage:</strong><br><code>SC QUERY</code></p>
+    <pre><strong>Example Output:</strong>
+SERVICE_NAME: wuauserv
+DISPLAY_NAME: Windows Update
+    </pre>
+</div>
 
-                for (let command of commands) {
-                    if (command.innerHTML.toLowerCase().includes(filter)) {
-                        hasMatch = true;
-                        break;
-                    }
-                }
+<div class="command">
+    <h3>SETX</h3>
+    <p><strong>Description:</strong> Sets environment variables permanently.</p>
+    <p><strong>Usage:</strong><br><code>SETX MY_VAR "My Value"</code></p>
+    <pre><strong>Example Output:</strong>
+SUCCESS: Specified value was saved.
+    </pre>
+</div>
 
-                section.style.display = hasMatch ? 'block' : 'none';
-            });
-        }
+<div class="command">
+    <h3>TIMEOUT</h3>
+    <p><strong>Description:</strong> Delays processing for a specified period.</p>
+    <p><strong>Usage:</strong><br><code>TIMEOUT 5</code></p>
+    <pre><strong>Example Output:</strong>
+Waiting for 5 seconds, press a key to continue...
+    </pre>
+</div>
 
-        function toggleTheme() {
-            const body = document.body;
-            body.classList.toggle('dark-mode');
-            const themeButton = document.getElementById('themeToggle');
-            themeButton.textContent = body.classList.contains('dark-mode') ? 'Switch to Light Mode' : 'Switch to Dark Mode';
-        }
-    </script>
+<div class="command">
+    <h3>NET TIME</h3>
+    <p><strong>Description:</strong> Synchronizes the computer's clock with a network time source.</p>
+    <p><strong>Usage:</strong><br><code>NET TIME \\timeserver</code></p>
+    <pre><strong>Example Output:</strong>
+The current time is 10:00 AM.
+    </pre>
+</div>
+
+<h2 id="commands-for-ethical-hackers-and-pentesters">Commands for Ethical Hackers and Pentesters</h2>
+
+<div class="command">
+    <h3>IPCONFIG</h3>
+    <p><strong>Description:</strong> Displays network configuration for all network adapters.</p>
+    <p><strong>Usage:</strong><br><code>IPCONFIG</code></p>
+    <pre><strong>Example Output:</strong>
+Windows IP Configuration
+
+Ethernet adapter Ethernet:
+    Connection-specific DNS Suffix  . : example.com
+    IPv4 Address. . . . . . . . . . . . : 192.168.1.2
+    Subnet Mask . . . . . . . . . . . . : 255.255.255.0
+    Default Gateway . . . . . . . . . . . : 192.168.1.1
+    </pre>
+</div>
+
+<div class="command">
+    <h3>PING</h3>
+    <p><strong>Description:</strong> Checks connectivity to a network host.</p>
+    <p><strong>Usage:</strong><br><code>PING google.com</code></p>
+    <pre><strong>Example Output:</strong>
+Pinging google.com [216.58.214.206] with 32 bytes of data:
+Reply from 216.58.214.206: bytes=32 time=14ms TTL=117
+    </pre>
+</div>
+
+<div class="command">
+    <h3>TRACERT</h3>
+    <p><strong>Description:</strong> Traces the path to a network host.</p>
+    <p><strong>Usage:</strong><br><code>TRACERT google.com</code></p>
+    <pre><strong>Example Output:</strong>
+Tracing route to google.com [216.58.214.206]
+over a maximum of 30 hops:
+   1    &lt;1 ms    &lt;1 ms    &lt;1 ms  router.local [192.168.1.1]
+   2     10 ms     9 ms     8 ms  10.10.10.1
+    </pre>
+</div>
+
+<div class="command">
+    <h3>NETSTAT</h3>
+    <p><strong>Description:</strong> Shows active connections and listening ports.</p>
+    <p><strong>Usage:</strong><br><code>NETSTAT -an</code></p>
+    <pre><strong>Example Output:</strong>
+Proto  Local Address          Foreign Address        State
+TCP    0.0.0.0:135           0.0.0.0:0             LISTENING
+    </pre>
+</div>
+
+<div class="command">
+    <h3>NSLOOKUP</h3>
+    <p><strong>Description:</strong> Queries DNS records.</p>
+    <p><strong>Usage:</strong><br><code>NSLOOKUP google.com</code></p>
+    <pre><strong>Example Output:</strong>
+Server:  dns.server.com
+Address:  192.168.1.1
+
+Non-authoritative answer:
+Name:    google.com
+Addresses:  216.58.214.206
+    </pre>
+</div>
+
+<div class="command">
+    <h3>ARP</h3>
+    <p><strong>Description:</strong> Displays the ARP table.</p>
+    <p><strong>Usage:</strong><br><code>ARP -a</code></p>
+    <pre><strong>Example Output:</strong>
+Interface: 192.168.1.2 --- 0x2
+    Internet Address      Physical Address      Type
+    192.168.1.1          00-14-22-01-23-45     dynamic
+    </pre>
+</div>
+
+<div class="command">
+    <h3>NET VIEW</h3>
+    <p><strong>Description:</strong> Lists shared resources on a network.</p>
+    <p><strong>Usage:</strong><br><code>NET VIEW</code></p>
+    <pre><strong>Example Output:</strong>
+Shared resources at \\COMPUTERNAME
+Share name   Type   Comment
+----------------------------------------------------
+Documents    Disk   My Documents
+    </pre>
+</div>
+
+<div class="command">
+    <h3>NET USER</h3>
+    <p><strong>Description:</strong> Displays or modifies user account information.</p>
+    <p><strong>Usage:</strong><br><code>NET USER</code></p>
+    <pre><strong>Example Output:</strong>
+User accounts for \\COMPUTERNAME
+-------------------------------------------------------------------------------
+Administrator            Guest
+User1                    User2
+The command completed successfully.
+    </pre>
+</div>
+
+<div class="command">
+    <h3>WHOAMI</h3>
+    <p><strong>Description:</strong> Displays the current user and its groups.</p>
+    <p><strong>Usage:</strong><br><code>WHOAMI</code></p>
+    <pre><strong>Example Output:</strong>
+Username
+    </pre>
+</div>
+
+<div class="command">
+    <h3>SYSTEMINFO</h3>
+    <p><strong>Description:</strong> Retrieves detailed system information.</p>
+    <p><strong>Usage:</strong><br><code>SYSTEMINFO</code></p>
+    <pre><strong>Example Output:</strong>
+Host Name:                 COMPUTERNAME
+OS Name:                   Microsoft Windows 10 Pro
+OS Version:                10.0.19041 N/A Build 19041
+    </pre>
+</div>
+
+<div class="command">
+    <h3>WMIC</h3>
+    <p><strong>Description:</strong> Accesses system information and management tasks.</p>
+    <p><strong>Usage:</strong><br><code>WMIC CPU GET Name</code></p>
+    <pre><strong>Example Output:</strong>
+Name
+Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz
+    </pre>
+</div>
+
+<div class="command">
+    <h3>DIR</h3>
+    <p><strong>Description:</strong> Lists directory contents.</p>
+    <p><strong>Usage:</strong><br><code>DIR</code></p>
+    <pre><strong>Example Output:</strong>
+Volume in drive C has no label.
+Volume Serial Number is XXXX-XXXX
+
+Directory of C:\Users\Username\Documents
+    </pre>
+</div>
+
+<div class="command">
+    <h3>COPY</h3>
+    <p><strong>Description:</strong> Copies files from one location to another.</p>
+    <p><strong>Usage:</strong><br><code>COPY C:\source\file.txt D:\destination\</code></p>
+    <pre><strong>Example Output:</strong>
+1 file(s) copied.
+    </pre>
+</div>
+
+<div class="command">
+    <h3>MOVE</h3>
+    <p><strong>Description:</strong> Moves files from one location to another.</p>
+    <p><strong>Usage:</strong><br><code>MOVE C:\source\file.txt D:\destination\</code></p>
+    <pre><strong>Example Output:</strong>
+1 file(s) moved.
+    </pre>
+</div>
+
+<div class="command">
+    <h3>DEL</h3>
+    <p><strong>Description:</strong> Deletes one or more files.</p>
+    <p><strong>Usage:</strong><br><code>DEL C:\Users\Username\Documents\file.txt</code></p>
+    <pre><strong>Example Output:</strong>
+1 file(s) deleted.
+    </pre>
+</div>
+
+<h2 id="secret-commands">Secret Commands</h2>
+
+<div class="command">
+    <h3>ICACLS</h3>
+    <p><strong>Description:</strong> Modifies file and directory permissions.</p>
+    <p><strong>Usage:</strong><br><code>ICACLS file.txt /grant UserName:F</code></p>
+    <pre><strong>Example Output:</strong>
+processed file: file.txt
+Successfully processed 1 files; Failed processing 0 files
+    </pre>
+</div>
+
+<div class="command">
+    <h3>NET LOCALGROUP</h3>
+    <p><strong>Description:</strong> Manages local user groups.</p>
+    <p><strong>Usage:</strong><br><code>NET LOCALGROUP Administrators</code></p>
+    <pre><strong>Example Output:</strong>
+Alias name     Administrators
+Comment        Administrators have complete and unrestricted access to the computer/domain
+    </pre>
+</div>
+
+<div class="command">
+    <h3>ROBOCOPY</h3>
+    <p><strong>Description:</strong> Robust file copy, useful for transferring files.</p>
+    <p><strong>Usage:</strong><br><code>ROBOCOPY C:\source D:\destination /E</code></p>
+    <pre><strong>Example Output:</strong>
+100% New File              1        10.00 k    file.txt
+    </pre>
+</div>
+
+<div class="command">
+    <h3>SHUTDOWN</h3>
+    <p><strong>Description:</strong> Shuts down or restarts the computer.</p>
+    <p><strong>Usage:</strong><br><code>SHUTDOWN /r /t 0</code></p>
+    <p><strong>Example Output:</strong><br>(No output; the computer will restart immediately.)</p>
+</div>
+
+<div class="command">
+    <h3>TASKLIST</h3>
+    <p><strong>Description:</strong> Lists running processes.</p>
+    <p><strong>Usage:</strong><br><code>TASKLIST</code></p>
+    <pre><strong>Example Output:</strong>
+Image Name                     PID Session Name        Session#    Mem Usage
+========================= ======== ================ =========== ============
+cmd.exe                       1234 Console                    1     10,000 K
+    </pre>
+</div>
+
+<div class="command">
+    <h3>TASKKILL</h3>
+    <p><strong>Description:</strong> Terminates processes.</p>
+    <p><strong>Usage:</strong><br><code>TASKKILL /PID 1234 /F</code></p>
+    <pre><strong>Example Output:</strong>
+SUCCESS: The process with PID 1234 has been terminated.
+    </pre>
+</div>
+
+<div class="command">
+    <h3>NETSH</h3>
+    <p><strong>Description:</strong> Configures network settings.</p>
+    <p><strong>Usage:</strong><br><code>NETSH WLAN show profiles</code></p>
+    <pre><strong>Example Output:</strong>
+Profiles on interface Wi-Fi :
+Group policy profiles (read only) :
+------------------------------------
+<None>
+
+User profiles :
+-------------------
+Profile 1
+    </pre>
+</div>
+
+<div class="command">
+    <h3>CIPHER</h3>
+    <p><strong>Description:</strong> Manages file encryption and decryption.</p>
+    <p><strong>Usage:</strong><br><code>CIPHER /E file.txt</code></p>
+    <pre><strong>Example Output:</strong>
+Successfully encrypted:  file.txt
+    </pre>
+</div>
+
+<h2 id="usage-tips">Usage Tips</h2>
+<ul>
+    <li>Always run Command Prompt as an administrator for commands that require elevated privileges.</li>
+    <li>Use the /help option with commands to learn more about their usage.</li>
+    <li>Be cautious when using commands that modify system settings or files.</li>
+</ul>
+
 </body>
 </html>
