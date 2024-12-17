@@ -3,47 +3,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Windows CMD Reference Guide</title>
+    <title>Command Line (CMD) Reference Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #00ff00;
             line-height: 1.6;
-            margin: 20px;
         }
+
+        header {
+            background: linear-gradient(to right, #ff0000, #0000ff);
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header h1 {
+            font-size: 4em;
+            margin: 0;
+            text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.8);
+            animation: slideIn 1s;
+        }
+
+        header p {
+            font-size: 1.5em;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .toc {
+            background: #1a1a1a;
+            color: #00ff00;
+            padding: 15px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .toc h2 {
+            text-align: center;
+        }
+
         h2 {
-            color: #2c3e50;
+            color: #00ff00;
+            margin-top: 40px;
+            font-size: 2em;
+            text-align: center;
         }
+
+        .command {
+            background: #1a1a1a;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+            padding: 20px;
+            width: 90%;
+            max-width: 800px;
+            transition: transform 0.2s;
+        }
+
+        .command:hover {
+            transform: scale(1.02);
+        }
+
         h3 {
-            color: #2980b9;
+            color: #ff00ff;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(255, 0, 255, 0.8);
         }
+
         pre {
-            background-color: #ecf0f1;
+            background-color: #00ff00;
+            color: #000;
             padding: 10px;
-            border: 1px solid #bdc3c7;
+            border-radius: 4px;
             overflow-x: auto;
         }
+
         code {
-            background-color: #d5dbdb;
+            background-color: #1a1a1a;
+            color: #00ff00;
             padding: 2px 4px;
             border-radius: 4px;
         }
-        .command {
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #bdc3c7;
+
+        .usage {
+            font-weight: bold;
+            color: #ff6700;
+        }
+
+        footer {
+            margin-top: 20px;
+            padding: 20px;
+            text-align: center;
+            background: #000;
+            color: #ffffff;
+            width: 100%;
+            border-top: 2px solid #00ff00;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: #1a1a1a;
+            margin: 5px 0;
+            border-radius: 4px;
+            padding: 10px;
+            color: #00ff00;
+        }
+
+        li:hover {
+            background: #00ff00;
+            color: #000;
+            transition: background 0.3s;
+        }
+
+        a {
+            color: #00ff00;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #ff0000;
         }
     </style>
 </head>
 <body>
 
-<h1>Windows CMD Reference Guide</h1>
+<header>
+    <h1>Command Line Reference</h1>
+    <p>Your guide to mastering command line!</p>
+</header>
+
+<div class="toc">
+    <h2>Table of Contents</h2>
+    <ul>
+        <li><a href="#basic-commands">Basic Commands</a></li>
+        <li><a href="#additional-commands">Additional Commands</a></li>
+        <li><a href="#commands-for-ethical-hackers-and-pentesters">Commands for Ethical Hackers and Pentesters</a></li>
+        <li><a href="#secret-commands">Secret Commands</a></li>
+        <li><a href="#usage-tips">Usage Tips</a></li>
+    </ul>
+</div>
+
+<h2 id="basic-commands">Basic Commands</h2>
+
+<div class="command">
+    <h3>CD</h3>
+    <p><span class="usage">Description:</span> Changes the current directory to the specified path.</p>
+    <p><span class="usage">Usage:</span><br><code>CD C:\\Users\\Username\\Documents</code></p>
+    <pre><strong>Example Output:</strong> (No output, but the prompt changes to indicate the new directory.)</pre>
+</div>
+
+<div class="command">
+    <h3>DIR</h3>
+    <p><span class="usage">Description:</span> Lists the contents of a directory.</p>
+    <p><span class="usage">Usage:</span><br><code>DIR</code></p>
+    <pre><strong>Example Output:</strong>
+Volume in drive C has no label.
+Volume Serial Number is XXXX-XXXX
+
+Directory of C:\\Users\\Username\\Documents
+
+12/17/2024  10:00 AM    &lt;DIR&gt;          .
+12/17/2024  10:00 AM    &lt;DIR&gt;          ..
+12/17/2024  09:00 AM                 123 example.txt
+    </pre>
+</div>
+
+<div class="command">
+    <h3>COPY</h3>
+    <p><span class="usage">Description:</span> Copies files from one location to another.</p>
+    <p><span class="usage">Usage:</span><br><code>COPY C:\\source\\file.txt D:\\destination\\</code></p>
+    <pre><strong>Example Output:</strong>
+1 file(s) copied.
+    </pre>
+</div>
+
+<div class="command">
+    <h3>DEL</h3>
+    <p><span class="usage">Description:</span> Deletes one or more files.</p>
+    <p><span class="usage">Usage:</span><br><code>DEL C:\\Users\\Username\\Documents\\file.txt</code></p>
+    <pre><strong>Example Output:</strong>
+1 file(s) deleted.
+    </pre>
+</div>
+
+<div class="command">
+    <h3>REN</h3>
+    <p><span class="usage">Description:</span> Renames a file or directory.</p>
+    <p><span class="usage">Usage:</span><br><code>REN oldfilename.txt newfilename.txt</code></p>
+    <pre><strong>Example Output:</strong> (No output, but the file is renamed.)</pre>
+</div>
+
+<div class="command">
+    <h3>MD</h3>
+    <p><span class="usage">Description:</span> Creates a new directory.</p>
+    <p><span class="usage">Usage:</span><br><code>MD NewFolder</code></p>
+    <pre><strong>Example Output:</strong> (No output, but the folder is created.)</pre>
+</div>
+
+<div class="command">
+    <h3>RD</h3>
+    <p><span class="usage">Description:</span> Removes a directory.</p>
+    <p><span class="usage">Usage:</span><br><code>RD NewFolder</code></p>
+    <pre><strong>Example Output:</strong> (No output, but the folder is removed.)</pre>
+</div>
+
+<div class="command">
+    <h3>CLS</h3>
+    <p><span class="usage">Description:</span> Clears the Command Prompt screen.</p>
+    <p><span class="usage">Usage:</span><br><code>CLS</code></p>
+    <pre><strong>Example Output:</strong> (No output, the screen is cleared.)</pre>
+</div>
+
+<div class="command">
+    <h3>EXIT</h3>
+    <p><span class="usage">Description:</span> Exits the Command Prompt.</p>
+    <p><span class="usage">Usage:</span><br><code>EXIT</code></p>
+    <pre><strong>Example Output:</strong> (No output, the Command Prompt window closes.)</pre>
+</div>
+
+<div class="command">
+    <h3>ECHO</h3>
+    <p><span class="usage">Description:</span> Displays messages or turns command echoing on or off.</p>
+    <p><span class="usage">Usage:</span><br><code>ECHO Hello, World!</code></p>
+    <pre><strong>Example Output:</strong>
+Hello, World!
+    </pre>
+</div>
 
 <h2 id="additional-commands">Additional Commands</h2>
 
 <div class="command">
     <h3>FIND</h3>
-    <p><strong>Description:</strong> Searches for a text string in a file or files.</p>
-    <p><strong>Usage:</strong><br><code>FIND "search_string" file.txt</code></p>
+    <p><span class="usage">Description:</span> Searches for a text string in a file or files.</p>
+    <p><span class="usage">Usage:</span><br><code>FIND "search_string" file.txt</code></p>
     <pre><strong>Example Output:</strong>
 1: This is the line with the search_string.
     </pre>
@@ -51,15 +275,15 @@
 
 <div class="command">
     <h3>LABEL</h3>
-    <p><strong>Description:</strong> Creates or changes the label of a disk.</p>
-    <p><strong>Usage:</strong><br><code>LABEL D: NewLabel</code></p>
+    <p><span class="usage">Description:</span> Creates or changes the label of a disk.</p>
+    <p><span class="usage">Usage:</span><br><code>LABEL D: NewLabel</code></p>
     <p><strong>Example Output:</strong><br>(No output, but the label is changed.)</p>
 </div>
 
 <div class="command">
     <h3>NBTSTAT</h3>
-    <p><strong>Description:</strong> Displays NetBIOS over TCP/IP statistics.</p>
-    <p><strong>Usage:</strong><br><code>NBTSTAT -s</code></p>
+    <p><span class="usage">Description:</span> Displays NetBIOS over TCP/IP statistics.</p>
+    <p><span class="usage">Usage:</span><br><code>NBTSTAT -s</code></p>
     <pre><strong>Example Output:</strong>
 Host Table
 Name            Type         Status
@@ -70,22 +294,22 @@ MyComputer      <00>        Registered
 
 <div class="command">
     <h3>POWERCFG</h3>
-    <p><strong>Description:</strong> Configures power settings.</p>
-    <p><strong>Usage:</strong><br><code>POWERCFG /LIST</code></p>
+    <p><span class="usage">Description:</span> Configures power settings.</p>
+    <p><span class="usage">Usage:</span><br><code>POWERCFG /LIST</code></p>
     <p><strong>Example Output:</strong><br>Power Schemes (*) are Labeled.</p>
 </div>
 
 <div class="command">
     <h3>RECYCLER</h3>
-    <p><strong>Description:</strong> Manages the Recycle Bin (deprecated).</p>
-    <p><strong>Usage:</strong><br><code>RECYCLER</code></p>
+    <p><span class="usage">Description:</span> Manages the Recycle Bin (deprecated).</p>
+    <p><span class="usage">Usage:</span><br><code>RECYCLER</code></p>
     <p><strong>Example Output:</strong><br>(No output; used in legacy systems.)</p>
 </div>
 
 <div class="command">
     <h3>SC</h3>
-    <p><strong>Description:</strong> Communicates with the Service Control Manager.</p>
-    <p><strong>Usage:</strong><br><code>SC QUERY</code></p>
+    <p><span class="usage">Description:</span> Communicates with the Service Control Manager.</p>
+    <p><span class="usage">Usage:</span><br><code>SC QUERY</code></p>
     <pre><strong>Example Output:</strong>
 SERVICE_NAME: wuauserv
 DISPLAY_NAME: Windows Update
@@ -94,8 +318,8 @@ DISPLAY_NAME: Windows Update
 
 <div class="command">
     <h3>SETX</h3>
-    <p><strong>Description:</strong> Sets environment variables permanently.</p>
-    <p><strong>Usage:</strong><br><code>SETX MY_VAR "My Value"</code></p>
+    <p><span class="usage">Description:</span> Sets environment variables permanently.</p>
+    <p><span class="usage">Usage:</span><br><code>SETX MY_VAR "My Value"</code></p>
     <pre><strong>Example Output:</strong>
 SUCCESS: Specified value was saved.
     </pre>
@@ -103,8 +327,8 @@ SUCCESS: Specified value was saved.
 
 <div class="command">
     <h3>TIMEOUT</h3>
-    <p><strong>Description:</strong> Delays processing for a specified period.</p>
-    <p><strong>Usage:</strong><br><code>TIMEOUT 5</code></p>
+    <p><span class="usage">Description:</span> Delays processing for a specified period.</p>
+    <p><span class="usage">Usage:</span><br><code>TIMEOUT 5</code></p>
     <pre><strong>Example Output:</strong>
 Waiting for 5 seconds, press a key to continue...
     </pre>
@@ -112,8 +336,8 @@ Waiting for 5 seconds, press a key to continue...
 
 <div class="command">
     <h3>NET TIME</h3>
-    <p><strong>Description:</strong> Synchronizes the computer's clock with a network time source.</p>
-    <p><strong>Usage:</strong><br><code>NET TIME \\timeserver</code></p>
+    <p><span class="usage">Description:</span> Synchronizes the computer's clock with a network time source.</p>
+    <p><span class="usage">Usage:</span><br><code>NET TIME \\timeserver</code></p>
     <pre><strong>Example Output:</strong>
 The current time is 10:00 AM.
     </pre>
@@ -123,8 +347,8 @@ The current time is 10:00 AM.
 
 <div class="command">
     <h3>IPCONFIG</h3>
-    <p><strong>Description:</strong> Displays network configuration for all network adapters.</p>
-    <p><strong>Usage:</strong><br><code>IPCONFIG</code></p>
+    <p><span class="usage">Description:</span> Displays network configuration for all network adapters.</p>
+    <p><span class="usage">Usage:</span><br><code>IPCONFIG</code></p>
     <pre><strong>Example Output:</strong>
 Windows IP Configuration
 
@@ -138,8 +362,8 @@ Ethernet adapter Ethernet:
 
 <div class="command">
     <h3>PING</h3>
-    <p><strong>Description:</strong> Checks connectivity to a network host.</p>
-    <p><strong>Usage:</strong><br><code>PING google.com</code></p>
+    <p><span class="usage">Description:</span> Checks connectivity to a network host.</p>
+    <p><span class="usage">Usage:</span><br><code>PING google.com</code></p>
     <pre><strong>Example Output:</strong>
 Pinging google.com [216.58.214.206] with 32 bytes of data:
 Reply from 216.58.214.206: bytes=32 time=14ms TTL=117
@@ -148,20 +372,20 @@ Reply from 216.58.214.206: bytes=32 time=14ms TTL=117
 
 <div class="command">
     <h3>TRACERT</h3>
-    <p><strong>Description:</strong> Traces the path to a network host.</p>
-    <p><strong>Usage:</strong><br><code>TRACERT google.com</code></p>
+    <p><span class="usage">Description:</span> Traces the path to a network host.</p>
+    <p><span class="usage">Usage:</span><br><code>TRACERT google.com</code></p>
     <pre><strong>Example Output:</strong>
 Tracing route to google.com [216.58.214.206]
 over a maximum of 30 hops:
-   1    &lt;1 ms    &lt;1 ms    &lt;1 ms  router.local [192.168.1.1]
+   1    <1 ms    <1 ms    <1 ms  router.local [192.168.1.1]
    2     10 ms     9 ms     8 ms  10.10.10.1
     </pre>
 </div>
 
 <div class="command">
     <h3>NETSTAT</h3>
-    <p><strong>Description:</strong> Shows active connections and listening ports.</p>
-    <p><strong>Usage:</strong><br><code>NETSTAT -an</code></p>
+    <p><span class="usage">Description:</span> Shows active connections and listening ports.</p>
+    <p><span class="usage">Usage:</span><br><code>NETSTAT -an</code></p>
     <pre><strong>Example Output:</strong>
 Proto  Local Address          Foreign Address        State
 TCP    0.0.0.0:135           0.0.0.0:0             LISTENING
@@ -170,8 +394,8 @@ TCP    0.0.0.0:135           0.0.0.0:0             LISTENING
 
 <div class="command">
     <h3>NSLOOKUP</h3>
-    <p><strong>Description:</strong> Queries DNS records.</p>
-    <p><strong>Usage:</strong><br><code>NSLOOKUP google.com</code></p>
+    <p><span class="usage">Description:</span> Queries DNS records.</p>
+    <p><span class="usage">Usage:</span><br><code>NSLOOKUP google.com</code></p>
     <pre><strong>Example Output:</strong>
 Server:  dns.server.com
 Address:  192.168.1.1
@@ -184,8 +408,8 @@ Addresses:  216.58.214.206
 
 <div class="command">
     <h3>ARP</h3>
-    <p><strong>Description:</strong> Displays the ARP table.</p>
-    <p><strong>Usage:</strong><br><code>ARP -a</code></p>
+    <p><span class="usage">Description:</span> Displays the ARP table.</p>
+    <p><span class="usage">Usage:</span><br><code>ARP -a</code></p>
     <pre><strong>Example Output:</strong>
 Interface: 192.168.1.2 --- 0x2
     Internet Address      Physical Address      Type
@@ -195,8 +419,8 @@ Interface: 192.168.1.2 --- 0x2
 
 <div class="command">
     <h3>NET VIEW</h3>
-    <p><strong>Description:</strong> Lists shared resources on a network.</p>
-    <p><strong>Usage:</strong><br><code>NET VIEW</code></p>
+    <p><span class="usage">Description:</span> Lists shared resources on a network.</p>
+    <p><span class="usage">Usage:</span><br><code>NET VIEW</code></p>
     <pre><strong>Example Output:</strong>
 Shared resources at \\COMPUTERNAME
 Share name   Type   Comment
@@ -207,8 +431,8 @@ Documents    Disk   My Documents
 
 <div class="command">
     <h3>NET USER</h3>
-    <p><strong>Description:</strong> Displays or modifies user account information.</p>
-    <p><strong>Usage:</strong><br><code>NET USER</code></p>
+    <p><span class="usage">Description:</span> Displays or modifies user account information.</p>
+    <p><span class="usage">Usage:</span><br><code>NET USER</code></p>
     <pre><strong>Example Output:</strong>
 User accounts for \\COMPUTERNAME
 -------------------------------------------------------------------------------
@@ -220,8 +444,8 @@ The command completed successfully.
 
 <div class="command">
     <h3>WHOAMI</h3>
-    <p><strong>Description:</strong> Displays the current user and its groups.</p>
-    <p><strong>Usage:</strong><br><code>WHOAMI</code></p>
+    <p><span class="usage">Description:</span> Displays the current user and its groups.</p>
+    <p><span class="usage">Usage:</span><br><code>WHOAMI</code></p>
     <pre><strong>Example Output:</strong>
 Username
     </pre>
@@ -229,8 +453,8 @@ Username
 
 <div class="command">
     <h3>SYSTEMINFO</h3>
-    <p><strong>Description:</strong> Retrieves detailed system information.</p>
-    <p><strong>Usage:</strong><br><code>SYSTEMINFO</code></p>
+    <p><span class="usage">Description:</span> Retrieves detailed system information.</p>
+    <p><span class="usage">Usage:</span><br><code>SYSTEMINFO</code></p>
     <pre><strong>Example Output:</strong>
 Host Name:                 COMPUTERNAME
 OS Name:                   Microsoft Windows 10 Pro
@@ -240,8 +464,8 @@ OS Version:                10.0.19041 N/A Build 19041
 
 <div class="command">
     <h3>WMIC</h3>
-    <p><strong>Description:</strong> Accesses system information and management tasks.</p>
-    <p><strong>Usage:</strong><br><code>WMIC CPU GET Name</code></p>
+    <p><span class="usage">Description:</span> Accesses system information and management tasks.</p>
+    <p><span class="usage">Usage:</span><br><code>WMIC CPU GET Name</code></p>
     <pre><strong>Example Output:</strong>
 Name
 Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz
@@ -250,20 +474,20 @@ Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz
 
 <div class="command">
     <h3>DIR</h3>
-    <p><strong>Description:</strong> Lists directory contents.</p>
-    <p><strong>Usage:</strong><br><code>DIR</code></p>
+    <p><span class="usage">Description:</span> Lists directory contents.</p>
+    <p><span class="usage">Usage:</span><br><code>DIR</code></p>
     <pre><strong>Example Output:</strong>
 Volume in drive C has no label.
 Volume Serial Number is XXXX-XXXX
 
-Directory of C:\Users\Username\Documents
+Directory of C:\\Users\\Username\\Documents
     </pre>
 </div>
 
 <div class="command">
     <h3>COPY</h3>
-    <p><strong>Description:</strong> Copies files from one location to another.</p>
-    <p><strong>Usage:</strong><br><code>COPY C:\source\file.txt D:\destination\</code></p>
+    <p><span class="usage">Description:</span> Copies files from one location to another.</p>
+    <p><span class="usage">Usage:</span><br><code>COPY C:\\source\\file.txt D:\\destination\\</code></p>
     <pre><strong>Example Output:</strong>
 1 file(s) copied.
     </pre>
@@ -271,8 +495,8 @@ Directory of C:\Users\Username\Documents
 
 <div class="command">
     <h3>MOVE</h3>
-    <p><strong>Description:</strong> Moves files from one location to another.</p>
-    <p><strong>Usage:</strong><br><code>MOVE C:\source\file.txt D:\destination\</code></p>
+    <p><span class="usage">Description:</span> Moves files from one location to another.</p>
+    <p><span class="usage">Usage:</span><br><code>MOVE C:\\source\\file.txt D:\\destination\\</code></p>
     <pre><strong>Example Output:</strong>
 1 file(s) moved.
     </pre>
@@ -280,8 +504,8 @@ Directory of C:\Users\Username\Documents
 
 <div class="command">
     <h3>DEL</h3>
-    <p><strong>Description:</strong> Deletes one or more files.</p>
-    <p><strong>Usage:</strong><br><code>DEL C:\Users\Username\Documents\file.txt</code></p>
+    <p><span class="usage">Description:</span> Deletes one or more files.</p>
+    <p><span class="usage">Usage:</span><br><code>DEL C:\\Users\\Username\\Documents\\file.txt</code></p>
     <pre><strong>Example Output:</strong>
 1 file(s) deleted.
     </pre>
@@ -291,8 +515,8 @@ Directory of C:\Users\Username\Documents
 
 <div class="command">
     <h3>ICACLS</h3>
-    <p><strong>Description:</strong> Modifies file and directory permissions.</p>
-    <p><strong>Usage:</strong><br><code>ICACLS file.txt /grant UserName:F</code></p>
+    <p><span class="usage">Description:</span> Modifies file and directory permissions.</p>
+    <p><span class="usage">Usage:</span><br><code>ICACLS file.txt /grant UserName:F</code></p>
     <pre><strong>Example Output:</strong>
 processed file: file.txt
 Successfully processed 1 files; Failed processing 0 files
@@ -301,8 +525,8 @@ Successfully processed 1 files; Failed processing 0 files
 
 <div class="command">
     <h3>NET LOCALGROUP</h3>
-    <p><strong>Description:</strong> Manages local user groups.</p>
-    <p><strong>Usage:</strong><br><code>NET LOCALGROUP Administrators</code></p>
+    <p><span class="usage">Description:</span> Manages local user groups.</p>
+    <p><span class="usage">Usage:</span><br><code>NET LOCALGROUP Administrators</code></p>
     <pre><strong>Example Output:</strong>
 Alias name     Administrators
 Comment        Administrators have complete and unrestricted access to the computer/domain
@@ -311,8 +535,8 @@ Comment        Administrators have complete and unrestricted access to the compu
 
 <div class="command">
     <h3>ROBOCOPY</h3>
-    <p><strong>Description:</strong> Robust file copy, useful for transferring files.</p>
-    <p><strong>Usage:</strong><br><code>ROBOCOPY C:\source D:\destination /E</code></p>
+    <p><span class="usage">Description:</span> Robust file copy, useful for transferring files.</p>
+    <p><span class="usage">Usage:</span><br><code>ROBOCOPY C:\\source D:\\destination /E</code></p>
     <pre><strong>Example Output:</strong>
 100% New File              1        10.00 k    file.txt
     </pre>
@@ -320,15 +544,15 @@ Comment        Administrators have complete and unrestricted access to the compu
 
 <div class="command">
     <h3>SHUTDOWN</h3>
-    <p><strong>Description:</strong> Shuts down or restarts the computer.</p>
-    <p><strong>Usage:</strong><br><code>SHUTDOWN /r /t 0</code></p>
+    <p><span class="usage">Description:</span> Shuts down or restarts the computer.</p>
+    <p><span class="usage">Usage:</span><br><code>SHUTDOWN /r /t 0</code></p>
     <p><strong>Example Output:</strong><br>(No output; the computer will restart immediately.)</p>
 </div>
 
 <div class="command">
     <h3>TASKLIST</h3>
-    <p><strong>Description:</strong> Lists running processes.</p>
-    <p><strong>Usage:</strong><br><code>TASKLIST</code></p>
+    <p><span class="usage">Description:</span> Lists running processes.</p>
+    <p><span class="usage">Usage:</span><br><code>TASKLIST</code></p>
     <pre><strong>Example Output:</strong>
 Image Name                     PID Session Name        Session#    Mem Usage
 ========================= ======== ================ =========== ============
@@ -338,8 +562,8 @@ cmd.exe                       1234 Console                    1     10,000 K
 
 <div class="command">
     <h3>TASKKILL</h3>
-    <p><strong>Description:</strong> Terminates processes.</p>
-    <p><strong>Usage:</strong><br><code>TASKKILL /PID 1234 /F</code></p>
+    <p><span class="usage">Description:</span> Terminates processes.</p>
+    <p><span class="usage">Usage:</span><br><code>TASKKILL /PID 1234 /F</code></p>
     <pre><strong>Example Output:</strong>
 SUCCESS: The process with PID 1234 has been terminated.
     </pre>
@@ -347,8 +571,8 @@ SUCCESS: The process with PID 1234 has been terminated.
 
 <div class="command">
     <h3>NETSH</h3>
-    <p><strong>Description:</strong> Configures network settings.</p>
-    <p><strong>Usage:</strong><br><code>NETSH WLAN show profiles</code></p>
+    <p><span class="usage">Description:</span> Configures network settings.</p>
+    <p><span class="usage">Usage:</span><br><code>NETSH WLAN show profiles</code></p>
     <pre><strong>Example Output:</strong>
 Profiles on interface Wi-Fi :
 Group policy profiles (read only) :
@@ -363,8 +587,8 @@ Profile 1
 
 <div class="command">
     <h3>CIPHER</h3>
-    <p><strong>Description:</strong> Manages file encryption and decryption.</p>
-    <p><strong>Usage:</strong><br><code>CIPHER /E file.txt</code></p>
+    <p><span class="usage">Description:</span> Manages file encryption and decryption.</p>
+    <p><span class="usage">Usage:</span><br><code>CIPHER /E file.txt</code></p>
     <pre><strong>Example Output:</strong>
 Successfully encrypted:  file.txt
     </pre>
@@ -376,6 +600,11 @@ Successfully encrypted:  file.txt
     <li>Use the /help option with commands to learn more about their usage.</li>
     <li>Be cautious when using commands that modify system settings or files.</li>
 </ul>
+
+<footer>
+    <p>&copy; 2024 Command Line Reference. All rights reserved.</p>
+    <p>Contact us: <a href="mailto:info@commandlinereference.com">infosecsamurai@onmail.com</a></p>
+</footer>
 
 </body>
 </html>
