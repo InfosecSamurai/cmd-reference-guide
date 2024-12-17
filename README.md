@@ -1,5 +1,8 @@
+![rsz_2enwni1b](https://github.com/user-attachments/assets/8253940e-2549-4be1-836c-6eb81fe771d2)
 
-# Windows Command Prompt (CMD) Reference Guide
+
+
+# Command Prompt (CMD) Reference Guide
 
 This guide provides a comprehensive list of Windows Command Prompt (cmd) commands, including basic commands, additional commands, and commands commonly used by ethical hackers and penetration testers.
 
