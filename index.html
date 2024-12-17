@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows CMD Reference Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css">
+</head>
+<body>
+    <header>
+        <h1>Windows Command Prompt (CMD) Reference Guide</h1>
+        <button id="themeToggle" onclick="toggleTheme()">Switch to Dark Mode</button>
+        <input type="text" id="searchBar" placeholder="Search commands..." onkeyup="filterCommands()">
+        <nav>
+            <ul>
+                <li><a href="#basic-commands">Basic Commands</a></li>
+                <li><a href="#additional-commands">Additional Commands</a></li>
+                <li><a href="#ethical-hacking">Ethical Hacking Commands</a></li>
+                <li><a href="#secret-commands">Secret Commands</a></li>
+                <li><a href="#usage-tips">Usage Tips</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="basic-commands">
+            <h2>Basic Commands</h2>
+            <div class="command">
+                <h3>CD</h3>
+                <p><strong>Description:</strong> Changes the current directory to the specified path.</p>
+                <p><strong>Usage:</strong></p>
+                <pre><code class="language-bash">CD C:\Users\Username\Documents</code></pre>
+            </div>
+            <!-- Repeat for other basic commands -->
+        </section>
+
+        <section id="additional-commands">
+            <h2>Additional Commands</h2>
+            <div class="command">
+                <h3>ASSOC</h3>
+                <p><strong>Description:</strong> Displays or modifies file extension associations.</p>
+                <p><strong>Usage:</strong></p>
+                <pre><code class="language-bash">ASSOC .txt</code></pre>
+            </div>
+            <!-- Add more additional commands here -->
+        </section>
+
+        <section id="ethical-hacking">
+            <h2>Commands for Ethical Hackers and Pen testers</h2>
+            <div class="command">
+                <h3>IPCONFIG</h3>
+                <p><strong>Description:</strong> Displays network configuration for all network adapters.</p>
+                <p><strong>Usage:</strong></p>
+                <pre><code class="language-bash">IPCONFIG</code></pre>
+            </div>
+            <!-- Add ethical hacking commands -->
+        </section>
+
+        <section id="secret-commands">
+            <h2>Secret Commands</h2>
+            <div class="command">
+                <h3>HELP</h3>
+                <p><strong>Description:</strong> Lists all available commands.</p>
+                <p><strong>Usage:</strong></p>
+                <pre><code class="language-bash">HELP</code></pre>
+            </div>
+            <!-- Add more secret commands -->
+        </section>
+
+        <section id="usage-tips">
+            <h2>Usage Tips</h2>
+            <ul>
+                <li>Always run Command Prompt as an administrator for commands that require elevated privileges.</li>
+                <li>Use the /help option with commands to learn more about their usage.</li>
+                <li>Be cautious when using commands that modify system settings or files.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Want to contribute? Check out the <a href="https://github.com/your-repo">GitHub repository</a>.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+    <script>
+        function filterCommands() {
+            const input = document.getElementById('searchBar');
+            const filter = input.value.toLowerCase();
+            const sections = document.querySelectorAll('section');
+
+            sections.forEach(section => {
+                const commands = section.getElementsByTagName('h3');
+                let hasMatch = false;
+
+                for (let command of commands) {
+                    if (command.innerHTML.toLowerCase().includes(filter)) {
+                        hasMatch = true;
+                        break;
+                    }
+                }
+
+                section.style.display = hasMatch ? 'block' : 'none';
+            });
+        }
+
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+            const themeButton = document.getElementById('themeToggle');
+            themeButton.textContent = body.classList.contains('dark-mode') ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+        }
+    </script>
+</body>
+</html>
