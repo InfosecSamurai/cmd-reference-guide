@@ -98,9 +98,9 @@
             text-shadow: 1px 1px 3px rgba(0, 255, 0, 0.8);
         }
 
-        pre {
-            background-color: #1a1a1a;
-            color: #00ff00; /* Ensuring pre formatting matches neon green */
+        pre.example-output {
+            background-color: #3a3a3a; /* Darker background for contrast */
+            color: #00ff00; /* Neon green text */
             padding: 10px;
             border-radius: 4px;
             overflow-x: auto;
@@ -182,14 +182,14 @@
     <h3>CD</h3>
     <p><span class="usage">Description:</span> Changes the current directory to the specified path.</p>
     <p><span class="usage">Usage:</span><br><code>CD C:\\Users\\Username\\Documents</code></p>
-    <pre><strong>Example Output:</strong> (No output, but the prompt changes to indicate the new directory.)</pre>
+    <pre class="example-output"><strong>Example Output:</strong> (No output, but the prompt changes to indicate the new directory.)</pre>
 </div>
 
 <div class="command">
     <h3>DIR</h3>
     <p><span class="usage">Description:</span> Lists the contents of a directory.</p>
     <p><span class="usage">Usage:</span><br><code>DIR</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 Volume in drive C has no label.
 Volume Serial Number is XXXX-XXXX
 
@@ -205,7 +205,7 @@ Directory of C:\\Users\\Username\\Documents
     <h3>COPY</h3>
     <p><span class="usage">Description:</span> Copies files from one location to another.</p>
     <p><span class="usage">Usage:</span><br><code>COPY C:\\source\\file.txt D:\\destination\\</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 1 file(s) copied.
     </pre>
 </div>
@@ -214,7 +214,7 @@ Directory of C:\\Users\\Username\\Documents
     <h3>DEL</h3>
     <p><span class="usage">Description:</span> Deletes one or more files.</p>
     <p><span class="usage">Usage:</span><br><code>DEL C:\\Users\\Username\\Documents\\file.txt</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 1 file(s) deleted.
     </pre>
 </div>
@@ -223,42 +223,42 @@ Directory of C:\\Users\\Username\\Documents
     <h3>REN</h3>
     <p><span class="usage">Description:</span> Renames a file or directory.</p>
     <p><span class="usage">Usage:</span><br><code>REN oldfilename.txt newfilename.txt</code></p>
-    <pre><strong>Example Output:</strong> (No output, but the file is renamed.)</pre>
+    <pre class="example-output"><strong>Example Output:</strong> (No output, but the file is renamed.)</pre>
 </div>
 
 <div class="command">
     <h3>MD</h3>
     <p><span class="usage">Description:</span> Creates a new directory.</p>
     <p><span class="usage">Usage:</span><br><code>MD NewFolder</code></p>
-    <pre><strong>Example Output:</strong> (No output, but the folder is created.)</pre>
+    <pre class="example-output"><strong>Example Output:</strong> (No output, but the folder is created.)</pre>
 </div>
 
 <div class="command">
     <h3>RD</h3>
     <p><span class="usage">Description:</span> Removes a directory.</p>
     <p><span class="usage">Usage:</span><br><code>RD NewFolder</code></p>
-    <pre><strong>Example Output:</strong> (No output, but the folder is removed.)</pre>
+    <pre class="example-output"><strong>Example Output:</strong> (No output, but the folder is removed.)</pre>
 </div>
 
 <div class="command">
     <h3>CLS</h3>
     <p><span class="usage">Description:</span> Clears the Command Prompt screen.</p>
     <p><span class="usage">Usage:</span><br><code>CLS</code></p>
-    <pre><strong>Example Output:</strong> (No output, the screen is cleared.)</pre>
+    <pre class="example-output"><strong>Example Output:</strong> (No output, the screen is cleared.)</pre>
 </div>
 
 <div class="command">
     <h3>EXIT</h3>
     <p><span class="usage">Description:</span> Exits the Command Prompt.</p>
     <p><span class="usage">Usage:</span><br><code>EXIT</code></p>
-    <pre><strong>Example Output:</strong> (No output, the Command Prompt window closes.)</pre>
+    <pre class="example-output"><strong>Example Output:</strong> (No output, the Command Prompt window closes.)</pre>
 </div>
 
 <div class="command">
     <h3>ECHO</h3>
     <p><span class="usage">Description:</span> Displays messages or turns command echoing on or off.</p>
     <p><span class="usage">Usage:</span><br><code>ECHO Hello, World!</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 Hello, World!
     </pre>
 </div>
@@ -269,7 +269,7 @@ Hello, World!
     <h3>FIND</h3>
     <p><span class="usage">Description:</span> Searches for a text string in a file or files.</p>
     <p><span class="usage">Usage:</span><br><code>FIND "search_string" file.txt</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 1: This is the line with the search_string.
     </pre>
 </div>
@@ -278,14 +278,14 @@ Hello, World!
     <h3>LABEL</h3>
     <p><span class="usage">Description:</span> Creates or changes the label of a disk.</p>
     <p><span class="usage">Usage:</span><br><code>LABEL D: NewLabel</code></p>
-    <pre style="color: #00ff00;"><strong>Example Output:</strong><br>(No output, but the label is changed.)</pre>
+    <pre class="example-output"><strong>Example Output:</strong><br>(No output, but the label is changed.)</pre>
 </div>
 
 <div class="command">
     <h3>NBTSTAT</h3>
     <p><span class="usage">Description:</span> Displays NetBIOS over TCP/IP statistics.</p>
     <p><span class="usage">Usage:</span><br><code>NBTSTAT -s</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 Host Table
 Name            Type         Status
 ------------------------------------------
@@ -297,21 +297,21 @@ MyComputer      <00>        Registered
     <h3>POWERCFG</h3>
     <p><span class="usage">Description:</span> Configures power settings.</p>
     <p><span class="usage">Usage:</span><br><code>POWERCFG /LIST</code></p>
-    <pre style="color: #00ff00;"><strong>Example Output:</strong><br>Power Schemes (*) are Labeled.</pre>
+    <pre class="example-output"><strong>Example Output:</strong><br>Power Schemes (*) are Labeled.</pre>
 </div>
 
 <div class="command">
     <h3>RECYCLER</h3>
     <p><span class="usage">Description:</span> Manages the Recycle Bin (deprecated).</p>
     <p><span class="usage">Usage:</span><br><code>RECYCLER</code></p>
-    <pre style="color: #00ff00;"><strong>Example Output:</strong><br>(No output; used in legacy systems.)</pre>
+    <pre class="example-output"><strong>Example Output:</strong><br>(No output; used in legacy systems.)</pre>
 </div>
 
 <div class="command">
     <h3>SC</h3>
     <p><span class="usage">Description:</span> Communicates with the Service Control Manager.</p>
     <p><span class="usage">Usage:</span><br><code>SC QUERY</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 SERVICE_NAME: wuauserv
 DISPLAY_NAME: Windows Update
     </pre>
@@ -321,7 +321,7 @@ DISPLAY_NAME: Windows Update
     <h3>SETX</h3>
     <p><span class="usage">Description:</span> Sets environment variables permanently.</p>
     <p><span class="usage">Usage:</span><br><code>SETX MY_VAR "My Value"</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 SUCCESS: Specified value was saved.
     </pre>
 </div>
@@ -330,7 +330,7 @@ SUCCESS: Specified value was saved.
     <h3>TIMEOUT</h3>
     <p><span class="usage">Description:</span> Delays processing for a specified period.</p>
     <p><span class="usage">Usage:</span><br><code>TIMEOUT 5</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 Waiting for 5 seconds, press a key to continue...
     </pre>
 </div>
@@ -339,7 +339,7 @@ Waiting for 5 seconds, press a key to continue...
     <h3>NET TIME</h3>
     <p><span class="usage">Description:</span> Synchronizes the computer's clock with a network time source.</p>
     <p><span class="usage">Usage:</span><br><code>NET TIME \\timeserver</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 The current time is 10:00 AM.
     </pre>
 </div>
@@ -350,7 +350,7 @@ The current time is 10:00 AM.
     <h3>IPCONFIG</h3>
     <p><span class="usage">Description:</span> Displays network configuration for all network adapters.</p>
     <p><span class="usage">Usage:</span><br><code>IPCONFIG</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 Windows IP Configuration
 
 Ethernet adapter Ethernet:
@@ -365,7 +365,7 @@ Ethernet adapter Ethernet:
     <h3>PING</h3>
     <p><span class="usage">Description:</span> Checks connectivity to a network host.</p>
     <p><span class="usage">Usage:</span><br><code>PING google.com</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 Pinging google.com [216.58.214.206] with 32 bytes of data:
 Reply from 216.58.214.206: bytes=32 time=14ms TTL=117
     </pre>
@@ -375,7 +375,7 @@ Reply from 216.58.214.206: bytes=32 time=14ms TTL=117
     <h3>TRACERT</h3>
     <p><span class="usage">Description:</span> Traces the path to a network host.</p>
     <p><span class="usage">Usage:</span><br><code>TRACERT google.com</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 Tracing route to google.com [216.58.214.206]
 over a maximum of 30 hops:
    1    <1 ms    <1 ms    <1 ms  router.local [192.168.1.1]
@@ -387,7 +387,7 @@ over a maximum of 30 hops:
     <h3>NETSTAT</h3>
     <p><span class="usage">Description:</span> Shows active connections and listening ports.</p>
     <p><span class="usage">Usage:</span><br><code>NETSTAT -an</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 Proto  Local Address          Foreign Address        State
 TCP    0.0.0.0:135           0.0.0.0:0             LISTENING
     </pre>
@@ -397,7 +397,7 @@ TCP    0.0.0.0:135           0.0.0.0:0             LISTENING
     <h3>NSLOOKUP</h3>
     <p><span class="usage">Description:</span> Queries DNS records.</p>
     <p><span class="usage">Usage:</span><br><code>NSLOOKUP google.com</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 Server:  dns.server.com
 Address:  192.168.1.1
 
@@ -411,7 +411,7 @@ Addresses:  216.58.214.206
     <h3>ARP</h3>
     <p><span class="usage">Description:</span> Displays the ARP table.</p>
     <p><span class="usage">Usage:</span><br><code>ARP -a</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 Interface: 192.168.1.2 --- 0x2
     Internet Address      Physical Address      Type
     192.168.1.1          00-14-22-01-23-45     dynamic
@@ -422,7 +422,7 @@ Interface: 192.168.1.2 --- 0x2
     <h3>NET VIEW</h3>
     <p><span class="usage">Description:</span> Lists shared resources on a network.</p>
     <p><span class="usage">Usage:</span><br><code>NET VIEW</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 Shared resources at \\COMPUTERNAME
 Share name   Type   Comment
 ----------------------------------------------------
@@ -434,7 +434,7 @@ Documents    Disk   My Documents
     <h3>NET USER</h3>
     <p><span class="usage">Description:</span> Displays or modifies user account information.</p>
     <p><span class="usage">Usage:</span><br><code>NET USER</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 User accounts for \\COMPUTERNAME
 -------------------------------------------------------------------------------
 Administrator            Guest
@@ -447,7 +447,7 @@ The command completed successfully.
     <h3>WHOAMI</h3>
     <p><span class="usage">Description:</span> Displays the current user and its groups.</p>
     <p><span class="usage">Usage:</span><br><code>WHOAMI</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 Username
     </pre>
 </div>
@@ -456,7 +456,7 @@ Username
     <h3>SYSTEMINFO</h3>
     <p><span class="usage">Description:</span> Retrieves detailed system information.</p>
     <p><span class="usage">Usage:</span><br><code>SYSTEMINFO</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 Host Name:                 COMPUTERNAME
 OS Name:                   Microsoft Windows 10 Pro
 OS Version:                10.0.19041 N/A Build 19041
@@ -467,7 +467,7 @@ OS Version:                10.0.19041 N/A Build 19041
     <h3>WMIC</h3>
     <p><span class="usage">Description:</span> Accesses system information and management tasks.</p>
     <p><span class="usage">Usage:</span><br><code>WMIC CPU GET Name</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 Name
 Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz
     </pre>
@@ -477,7 +477,7 @@ Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz
     <h3>DIR</h3>
     <p><span class="usage">Description:</span> Lists directory contents.</p>
     <p><span class="usage">Usage:</span><br><code>DIR</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 Volume in drive C has no label.
 Volume Serial Number is XXXX-XXXX
 
@@ -489,7 +489,7 @@ Directory of C:\\Users\\Username\\Documents
     <h3>COPY</h3>
     <p><span class="usage">Description:</span> Copies files from one location to another.</p>
     <p><span class="usage">Usage:</span><br><code>COPY C:\\source\\file.txt D:\\destination\\</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 1 file(s) copied.
     </pre>
 </div>
@@ -498,7 +498,7 @@ Directory of C:\\Users\\Username\\Documents
     <h3>MOVE</h3>
     <p><span class="usage">Description:</span> Moves files from one location to another.</p>
     <p><span class="usage">Usage:</span><br><code>MOVE C:\\source\\file.txt D:\\destination\\</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 1 file(s) moved.
     </pre>
 </div>
@@ -507,7 +507,7 @@ Directory of C:\\Users\\Username\\Documents
     <h3>DEL</h3>
     <p><span class="usage">Description:</span> Deletes one or more files.</p>
     <p><span class="usage">Usage:</span><br><code>DEL C:\\Users\\Username\\Documents\\file.txt</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 1 file(s) deleted.
     </pre>
 </div>
@@ -518,7 +518,7 @@ Directory of C:\\Users\\Username\\Documents
     <h3>ICACLS</h3>
     <p><span class="usage">Description:</span> Modifies file and directory permissions.</p>
     <p><span class="usage">Usage:</span><br><code>ICACLS file.txt /grant UserName:F</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 processed file: file.txt
 Successfully processed 1 files; Failed processing 0 files
     </pre>
@@ -528,7 +528,7 @@ Successfully processed 1 files; Failed processing 0 files
     <h3>NET LOCALGROUP</h3>
     <p><span class="usage">Description:</span> Manages local user groups.</p>
     <p><span class="usage">Usage:</span><br><code>NET LOCALGROUP Administrators</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 Alias name     Administrators
 Comment        Administrators have complete and unrestricted access to the computer/domain
     </pre>
@@ -538,7 +538,7 @@ Comment        Administrators have complete and unrestricted access to the compu
     <h3>ROBOCOPY</h3>
     <p><span class="usage">Description:</span> Robust file copy, useful for transferring files.</p>
     <p><span class="usage">Usage:</span><br><code>ROBOCOPY C:\\source D:\\destination /E</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 100% New File              1        10.00 k    file.txt
     </pre>
 </div>
@@ -547,14 +547,14 @@ Comment        Administrators have complete and unrestricted access to the compu
     <h3>SHUTDOWN</h3>
     <p><span class="usage">Description:</span> Shuts down or restarts the computer.</p>
     <p><span class="usage">Usage:</span><br><code>SHUTDOWN /r /t 0</code></p>
-    <pre style="color: #00ff00;"><strong>Example Output:</strong><br>(No output; the computer will restart immediately.)</pre>
+    <pre class="example-output"><strong>Example Output:</strong><br>(No output; the computer will restart immediately.)</pre>
 </div>
 
 <div class="command">
     <h3>TASKLIST</h3>
     <p><span class="usage">Description:</span> Lists running processes.</p>
     <p><span class="usage">Usage:</span><br><code>TASKLIST</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 Image Name                     PID Session Name        Session#    Mem Usage
 ========================= ======== ================ =========== ============
 cmd.exe                       1234 Console                    1     10,000 K
@@ -565,7 +565,7 @@ cmd.exe                       1234 Console                    1     10,000 K
     <h3>TASKKILL</h3>
     <p><span class="usage">Description:</span> Terminates processes.</p>
     <p><span class="usage">Usage:</span><br><code>TASKKILL /PID 1234 /F</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 SUCCESS: The process with PID 1234 has been terminated.
     </pre>
 </div>
@@ -574,7 +574,7 @@ SUCCESS: The process with PID 1234 has been terminated.
     <h3>NETSH</h3>
     <p><span class="usage">Description:</span> Configures network settings.</p>
     <p><span class="usage">Usage:</span><br><code>NETSH WLAN show profiles</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 Profiles on interface Wi-Fi :
 Group policy profiles (read only) :
 ------------------------------------
@@ -590,7 +590,7 @@ Profile 1
     <h3>CIPHER</h3>
     <p><span class="usage">Description:</span> Manages file encryption and decryption.</p>
     <p><span class="usage">Usage:</span><br><code>CIPHER /E file.txt</code></p>
-    <pre><strong>Example Output:</strong>
+    <pre class="example-output"><strong>Example Output:</strong>
 Successfully encrypted:  file.txt
     </pre>
 </div>
