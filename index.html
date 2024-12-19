@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             background-color: #000;
-            color: #00ff00;
+            color: #00ff00;  /* Global text color */
             line-height: 1.6;
         }
 
@@ -66,6 +66,7 @@
         }
 
         .toc h2 {
+            color: #00ff00; /* Ensure Table of Contents headings are neon green */
             text-align: center;
         }
 
@@ -92,14 +93,14 @@
         }
 
         h3 {
-            color: #ff00ff;
+            color: #00ff00; /* Ensure command section headers are neon green */
             margin-bottom: 10px;
-            text-shadow: 1px 1px 3px rgba(255, 0, 255, 0.8);
+            text-shadow: 1px 1px 3px rgba(0, 255, 0, 0.8);
         }
 
         pre {
-            background-color: #00ff00;
-            color: #000;
+            background-color: #1a1a1a;
+            color: #00ff00; /* Ensuring pre formatting matches neon green */
             padding: 10px;
             border-radius: 4px;
             overflow-x: auto;
@@ -107,14 +108,14 @@
 
         code {
             background-color: #1a1a1a;
-            color: #00ff00;
+            color: #00ff00; /* Ensure code snippets are neon green */
             padding: 2px 4px;
             border-radius: 4px;
         }
 
         .usage {
             font-weight: bold;
-            color: #ff6700;
+            color: #ff6700; /* Use a different color for better visibility */
         }
 
         footer {
@@ -137,7 +138,7 @@
             margin: 5px 0;
             border-radius: 4px;
             padding: 10px;
-            color: #00ff00;
+            color: #00ff00; /* Ensure list items are neon green */
         }
 
         li:hover {
@@ -147,7 +148,7 @@
         }
 
         a {
-            color: #00ff00;
+            color: #00ff00; /* Ensure links are neon green */
             text-decoration: none;
         }
 
@@ -596,9 +597,9 @@ Successfully encrypted:  file.txt
 
 <h2 id="usage-tips">Usage Tips</h2>
 <ul>
-    <li>Always run Command Prompt as an administrator for commands that require elevated privileges.</li>
-    <li>Use the /help option with commands to learn more about their usage.</li>
-    <li>Be cautious when using commands that modify system settings or files.</li>
+    <li style="color: #00ff00;">Always run Command Prompt as an administrator for commands that require elevated privileges.</li>
+    <li style="color: #00ff00;">Use the /help option with commands to learn more about their usage.</li>
+    <li style="color: #00ff00;">Be cautious when using commands that modify system settings or files.</li>
 </ul>
 
 <footer>
