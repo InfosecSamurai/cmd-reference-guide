@@ -6,7 +6,7 @@
 
 This guide provides a comprehensive list of Windows Command Prompt (cmd) commands, including basic commands, additional commands, and commands commonly used by ethical hackers and penetration testers.
 
-[CMD Reference Guide](https://infosecsamurai.github.io/cmd-reference-guide/#secret-commands)
+[CMD Reference Guide](https://infosecsamurai.github.io/cmd-reference-guide)
 
 ## Table of Contents
 
