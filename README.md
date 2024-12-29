@@ -55,7 +55,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Copies files from one location to another.
 - **Usage**:
     
-    ```
+    ```cmd
     COPY C:\\source\\file.txt D:\\destination\\
     ```
     
@@ -71,7 +71,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Deletes one or more files.
 - **Usage**:
     
-    ```
+    ```cmd
     DEL C:\\Users\\Username\\Documents\\file.txt
     ```
     
@@ -87,7 +87,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Renames a file or directory.
 - **Usage**:
     
-    ```
+    ```cmd
     REN oldfilename.txt newfilename.txt
     ```
     
@@ -99,7 +99,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Creates a new directory.
 - **Usage**:
     
-    ```
+    ```cmd
     MD NewFolder
     ```
     
@@ -111,7 +111,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Removes a directory.
 - **Usage**:
     
-    ```
+    ```cmd
     RD NewFolder
     ```
     
@@ -123,7 +123,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Clears the Command Prompt screen.
 - **Usage**:
     
-    ```
+    ```cmd
     CLS
     ```
     
@@ -135,7 +135,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Exits the Command Prompt.
 - **Usage**:
     
-    ```
+    ```cmd
     EXIT
     ```
     
@@ -147,7 +147,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Displays messages or turns command echoing on or off.
 - **Usage**:
     
-    ```
+    ```cmd
     ECHO Hello, World!
     ```
     
@@ -165,7 +165,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Displays or modifies file extension associations.
 - **Usage**:
     
-    ```
+    ```cmd
     ASSOC .txt
     ```
     
@@ -181,7 +181,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Changes the active code page number.
 - **Usage**:
     
-    ```
+    ```cmd
     CHCP
     ```
     
@@ -197,7 +197,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Accepts user input from a set of choices.
 - **Usage**:
     
-    ```
+    ```cmd
     CHOICE /C ABC /N "Choose A, B, or C:"
     ```
     
@@ -213,7 +213,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Sets the default console foreground and background colors.
 - **Usage**:
     
-    ```
+    ```cmd
     COLOR 0A
     ```
     
@@ -226,7 +226,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Compares the contents of two or more files.
 - **Usage**:
     
-    ```
+    ```cmd
     COMP file1.txt file2.txt
     ```
     
@@ -242,7 +242,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Manages shadow copies.
 - **Usage**:
     
-    ```
+    ```cmd
     DISKSHADOW
     ```
     
@@ -254,7 +254,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Searches for a text string in a file or files.
 - **Usage**:
     
-    ```
+    ```cmd
     FIND "search_string" file.txt
     ```
     
@@ -270,7 +270,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Creates or changes the label of a disk.
 - **Usage**:
     
-    ```
+    ```cmd
     LABEL D: NewLabel
     ```
     
@@ -282,7 +282,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Displays NetBIOS over TCP/IP statistics.
 - **Usage**:
     
-    ```
+    ```cmd
     NBTSTAT -s
     ```
     
@@ -301,7 +301,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Configures power settings.
 - **Usage**:
     
-    ```
+    ```cmd
     POWERCFG /LIST
     ```
     
@@ -317,7 +317,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Manages the Recycle Bin (deprecated).
 - **Usage**:
     
-    ```
+    ```cmd
     RECYCLER
     ```
     
@@ -329,7 +329,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Communicates with the Service Control Manager.
 - **Usage**:
     
-    ```
+    ```cmd
     SC QUERY
     ```
     
@@ -346,7 +346,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Sets environment variables permanently.
 - **Usage**:
     
-    ```
+    ```cmd
     SETX MY_VAR "My Value"
     ```
     
@@ -362,7 +362,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Delays processing for a specified period.
 - **Usage**:
     
-    ```
+    ```cmd
     TIMEOUT 5
     ```
     
@@ -378,7 +378,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Synchronizes the computer's clock with a network time source.
 - **Usage**:
     
-    ```
+    ```cmd
     NET TIME \\\\timeserver
     ```
     
@@ -396,7 +396,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Displays network configuration for all network adapters.
 - **Usage**:
     
-    ```
+    ```cmd
     IPCONFIG
     ```
     
@@ -418,7 +418,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Checks connectivity to a network host.
 - **Usage**:
     
-    ```
+    ```cmd
     PING google.com
     ```
     
@@ -435,7 +435,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Traces the path to a network host.
 - **Usage**:
     
-    ```
+    ```cmd
     TRACERT google.com
     ```
     
@@ -454,7 +454,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Shows active connections and listening ports.
 - **Usage**:
     
-    ```
+    ```cmd
     NETSTAT -an
     ```
     
@@ -471,7 +471,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Queries DNS records.
 - **Usage**:
     
-    ```
+    ```cmd
     NSLOOKUP google.com
     ```
     
@@ -492,7 +492,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Displays the ARP table.
 - **Usage**:
     
-    ```
+    ```cmd
     ARP -a
     ```
     
@@ -510,7 +510,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Lists shared resources on a network.
 - **Usage**:
     
-    ```
+    ```cmd
     NET VIEW
     ```
     
@@ -529,7 +529,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Displays or modifies user account information.
 - **Usage**:
     
-    ```
+    ```cmd
     NET USER
     ```
     
@@ -549,7 +549,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Displays the current user and its groups.
 - **Usage**:
     
-    ```
+    ```cmd
     WHOAMI
     ```
     
@@ -565,7 +565,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Retrieves detailed system information.
 - **Usage**:
     
-    ```
+    ```cmd
     SYSTEMINFO
     ```
     
@@ -583,7 +583,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Accesses system information and management tasks.
 - **Usage**:
     
-    ```
+    ```cmd
     WMIC CPU GET Name
     ```
     
@@ -600,7 +600,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Lists directory contents.
 - **Usage**:
     
-    ```
+    ```cmd
     DIR
     ```
     
@@ -619,7 +619,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Copies files from one location to another.
 - **Usage**:
     
-    ```
+    ```cmd
     COPY C:\\source\\file.txt D:\\destination\\
     ```
     
@@ -635,7 +635,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Moves files from one location to another.
 - **Usage**:
     
-    ```
+    ```cmd
     MOVE C:\\source\\file.txt D:\\destination\\
     ```
     
@@ -651,7 +651,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Deletes one or more files.
 - **Usage**:
     
-    ```
+    ```cmd
     DEL C:\\Users\\Username\\Documents\\file.txt
     ```
     
@@ -667,7 +667,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Modifies file and directory permissions.
 - **Usage**:
     
-    ```
+    ```cmd
     ICACLS file.txt /grant UserName:F
     ```
     
@@ -684,7 +684,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Manages local user groups.
 - **Usage**:
     
-    ```
+    ```cmd
     NET LOCALGROUP Administrators
     ```
     
@@ -701,7 +701,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Robust file copy, useful for transferring files.
 - **Usage**:
     
-    ```
+    ```cmd
     ROBOCOPY C:\\source D:\\destination /E
     ```
     
@@ -717,7 +717,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Shuts down or restarts the computer.
 - **Usage**:
     
-    ```
+    ```cmd
     SHUTDOWN /r /t 0
     ```
     
@@ -729,7 +729,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Lists running processes.
 - **Usage**:
     
-    ```
+    ```cmd
     TASKLIST
     ```
     
@@ -747,7 +747,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Terminates processes.
 - **Usage**:
     
-    ```
+    ```cmd
     TASKKILL /PID 1234 /F
     ```
     
@@ -763,7 +763,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Configures network settings.
 - **Usage**:
     
-    ```
+    ```cmd
     NETSH WLAN show profiles
     ```
     
@@ -786,7 +786,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Manages file encryption and decryption.
 - **Usage**:
     
-    ```
+    ```cmd
     CIPHER /E file.txt
     ```
     
@@ -804,7 +804,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Lists all available commands.
 - **Usage**:
     
-    ```
+    ```cmd
     HELP
     ```
     
@@ -821,7 +821,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Connects or disconnects from a shared resource.
 - **Usage**:
     
-    ```
+    ```cmd
     NET USE Z: \\\\Server\\Share
     ```
     
@@ -837,7 +837,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Manages user rights and privileges.
 - **Usage**:
     
-    ```
+    ```cmd
     NTRIGHTS +r SeDenyNetworkLogonRight -u UserName
     ```
     
@@ -853,7 +853,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Displays the Windows version.
 - **Usage**:
     
-    ```
+    ```cmd
     VER
     ```
     
@@ -869,7 +869,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Displays the current username and group memberships.
 - **Usage**:
     
-    ```
+    ```cmd
     WHOAMI /ALL
     ```
     
@@ -886,7 +886,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Provides detailed system information.
 - **Usage**:
     
-    ```
+    ```cmd
     SYSTEMINFO
     ```
     
@@ -903,7 +903,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Perform tasks related to file systems.
 - **Usage**:
     
-    ```
+    ```cmd
     FSUTIL FSINFO drives
     ```
     
@@ -919,7 +919,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Displays files opened by remote users.
 - **Usage**:
     
-    ```
+    ```cmd
     OPENFILES
     ```
     
@@ -935,7 +935,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Accesses system information and management tasks.
 - **Usage**:
     
-    ```
+    ```cmd
     WMIC PROCESS LIST
     ```
     
