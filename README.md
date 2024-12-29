@@ -32,7 +32,7 @@ This guide provides a comprehensive list of Windows Command Prompt (cmd) command
 - **Description**: Lists the contents of a directory.
 - **Usage**:
     
-    ```
+    ```cmd
     DIR
     ```
     
